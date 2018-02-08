@@ -120,7 +120,7 @@ func _input(event):
 	# CTRL+F12
 	if (event is InputEventKey and event.pressed and event.control and event.scancode==KEY_F12):
 		OS.print_all_textures_by_size()
-		
+
 	if menu_stack.size() > 0:
 		menu_stack[menu_stack.size() - 1].input(event)
 	elif current != null:

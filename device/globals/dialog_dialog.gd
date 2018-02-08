@@ -110,11 +110,11 @@ func start(params, p_context):
 	ready = false
 	animation.play("show")
 	animation.seek(0, true)
-	
+
 func _on_mouse_enter(button):
 	button.get_node("label").add_color_override("font_color", mouse_enter_color)
 	button.get_node("label").add_color_override("font_color_shadow", mouse_enter_shadow_color)
-	
+
 func _on_mouse_exit(button):
 	button.get_node("label").add_color_override("font_color", mouse_exit_color)
 	button.get_node("label").add_color_override("font_color_shadow", mouse_exit_shadow_color)

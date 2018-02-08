@@ -20,7 +20,7 @@ func newgame_pressed():
 		confirm_popup.start("UI_NEW_GAME_CONFIRM",self,"start_new_game")
 	else:
 		start_new_game(true)
-		
+
 func start_new_game(p_confirm):
 	if !p_confirm:
 		return
@@ -62,7 +62,7 @@ func _on_exit_pressed():
 	button_clicked()
 	confirm_popup = main.load_menu("res://ui/confirm_popup.tscn")
 	confirm_popup.start("UI_QUIT_CONFIRM",self,"_quit_game")
-	
+
 func _quit_game(p_confirm):
 	if !p_confirm:
 		return

@@ -124,5 +124,5 @@ func _ready():
 	add_to_group("game")
 
 	call_deferred("setup_vm")
-	
+
 
