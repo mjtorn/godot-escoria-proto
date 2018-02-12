@@ -12,13 +12,11 @@
 [ext_resource path="res://scenes/rooms/001.office/03-desk.png" type="Texture" id=10]
 [ext_resource path="res://globals/game.tscn" type="PackedScene" id=11]
 
-
-
 [sub_resource type="NavigationPolygon" id=1]
 
-vertices = PoolVector2Array( 1069, 624, 2039, 700, 12.996, 713, 625.996, 623, 1327, 506, 1954, 508, 1068, 527, 68.996, 494, 623.996, 542 )
+vertices = PoolVector2Array( 1122.3, 623.08, 2039, 700, -0.241604, 706.083, 608.146, 618.757, 1327, 506, 1954, 508, 1120.47, 529.702, 55.5653, 497.711, 609.976, 533.16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 1, 0, 6 ), PoolIntArray( 7, 4, 6, 8 ), PoolIntArray( 3, 2, 7, 8 ) ]
-outlines = [ PoolVector2Array( 1327, 506, 1954, 508, 2039, 700, 12.996, 713, 68.996, 494 ), PoolVector2Array( 625.996, 623, 1069, 624, 1068, 527, 623.996, 542 ) ]
+outlines = [ PoolVector2Array( 1327, 506, 1954, 508, 2039, 700, -0.241604, 706.083, 55.5653, 497.711 ), PoolVector2Array( 608.146, 618.757, 1122.3, 623.08, 1120.47, 529.702, 609.976, 533.16 ) ]
 
 [node name="scene" type="Node2D" index="0"]
 
@@ -40,7 +38,7 @@ size_flags_vertical = 2
 texture = ExtResource( 2 )
 stretch_mode = 0
 script = ExtResource( 3 )
-_sections_unfolded = [ "Hint", "Rect" ]
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect" ]
 action = "walk"
 
 [node name="rear-wall" type="TextureRect" parent="background" index="0"]
@@ -58,6 +56,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 4 )
 stretch_mode = 0
+_sections_unfolded = [ "Anchor" ]
 
 [node name="objects" type="TextureRect" parent="background" index="1"]
 
@@ -77,6 +76,7 @@ stretch_mode = 0
 
 [node name="terrain" type="Navigation2D" parent="." index="1"]
 
+position = Vector2( 25.8472, 246.228 )
 script = ExtResource( 6 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 scales = null
@@ -89,7 +89,8 @@ scale_max = 1.0
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="terrain" index="0"]
 
-position = Vector2( 0, -1 )
+position = Vector2( -6.32861, -284.256 )
+scale = Vector2( 1.48697, 1.57339 )
 navpoly = SubResource( 1 )
 enabled = true
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
