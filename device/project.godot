@@ -30,14 +30,14 @@ screen_size_override=false
 
 [display]
 
-window/size/width=1280
-window/size/height=720
+window/size/width=1920
+window/size/height=1080
 game_height=1080
 game_width=1920
-window/height=720
-window/test_height=720
-window/test_width=1280
-window/width=1280
+window/height=1080
+window/test_height=1080
+window/test_width=1920
+window/width=1920
 
 [gdnative]
 
