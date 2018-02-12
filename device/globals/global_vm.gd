@@ -111,8 +111,6 @@ func update_window_fullscreen(p_force = false):
 		else:
 			size.y = size.y - title
 			size.x = h / ratio
-		size.x = 1280
-		size.y = 720
 		printt("setting window to size", size)
 		OS.set_window_fullscreen(settings.fullscreen)
 		OS.set_window_size(size)
