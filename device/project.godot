@@ -10,6 +10,8 @@ config_version=3
 
 [application]
 
+config/name="Prototype"
+run/main_scene="res://scenes/rooms/001.office/main.tscn"
 main_scene="res://globals/scene_main.tscn"
 max_voice_volume=2
 save_data="res://globals/save_data.gd"

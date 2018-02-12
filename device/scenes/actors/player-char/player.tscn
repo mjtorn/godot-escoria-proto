@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://globals/player.gd" type="Script" id=1]
-[ext_resource path="res://actors/player-char/player_anims.gd" type="Script" id=2]
-[ext_resource path="res://actors/player-char/Idle_D.png" type="Texture" id=3]
+[ext_resource path="res://scenes/actors/player-char/player_anims.gd" type="Script" id=2]
+[ext_resource path="res://scenes/actors/player-char/Idle_D.png" type="Texture" id=3]
+
 
 [node name="player" type="Node2D"]
 

@@ -1,16 +1,18 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://globals/scene.gd" type="Script" id=1]
-[ext_resource path="res://scenes/001.office/00-Background.png" type="Texture" id=2]
+[ext_resource path="res://scenes/rooms/001.office/00-Background.png" type="Texture" id=2]
 [ext_resource path="res://globals/background.gd" type="Script" id=3]
-[ext_resource path="res://scenes/001.office/01-rear wall.png" type="Texture" id=4]
-[ext_resource path="res://scenes/001.office/02-objects.png" type="Texture" id=5]
+[ext_resource path="res://scenes/rooms/001.office/01-rear wall.png" type="Texture" id=4]
+[ext_resource path="res://scenes/rooms/001.office/02-objects.png" type="Texture" id=5]
 [ext_resource path="res://globals/terrain.gd" type="Script" id=6]
-[ext_resource path="res://actors/player-char/player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/actors/player-char/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://ui/action_menu.tscn" type="PackedScene" id=8]
 [ext_resource path="res://globals/item.gd" type="Script" id=9]
-[ext_resource path="res://scenes/001.office/03-desk.png" type="Texture" id=10]
+[ext_resource path="res://scenes/rooms/001.office/03-desk.png" type="Texture" id=10]
 [ext_resource path="res://globals/game.tscn" type="PackedScene" id=11]
+
+
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -18,7 +20,7 @@ vertices = PoolVector2Array( 1069, 624, 2039, 700, 12.996, 713, 625.996, 623, 13
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 1, 0, 6 ), PoolIntArray( 7, 4, 6, 8 ), PoolIntArray( 3, 2, 7, 8 ) ]
 outlines = [ PoolVector2Array( 1327, 506, 1954, 508, 2039, 700, 12.996, 713, 68.996, 494 ), PoolVector2Array( 625.996, 623, 1069, 624, 1068, 527, 623.996, 542 ) ]
 
-[node name="scene" type="Node2D"]
+[node name="scene" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
