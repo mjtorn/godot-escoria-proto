@@ -97,8 +97,8 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="player" parent="." index="2" instance=ExtResource( 7 )]
 
-position = Vector2( 1408, 485 )
-z_index = 485
+position = Vector2( 2013.37, 895.834 )
+z_index = 895
 
 [node name="action_menu" parent="." index="3" instance=ExtResource( 8 )]
 

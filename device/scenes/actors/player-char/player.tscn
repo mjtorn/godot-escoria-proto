@@ -4,7 +4,6 @@
 [ext_resource path="res://scenes/actors/player-char/player_anims.gd" type="Script" id=2]
 [ext_resource path="res://scenes/actors/player-char/Idle_D.png" type="Texture" id=3]
 
-
 [node name="player" type="Node2D"]
 
 script = ExtResource( 1 )
@@ -29,7 +28,7 @@ _sections_unfolded = [ "Pause", "Playback Options" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-position = Vector2( 19, -150 )
+position = Vector2( 14.5762, -241.145 )
 texture = ExtResource( 3 )
 
 
