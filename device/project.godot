@@ -26,9 +26,8 @@ application/tooltip_lang_default="en"
 
 debug/screen_size_override=false
 
-; display
-game_height=1080
-game_width=1920
+display/game_height=1080
+display/game_width=1920
 
 ; platform
 action_menu_scale=2

@@ -729,8 +729,8 @@ func _ready():
 	level = preload("res://globals/vm_level.gd").new()
 	level.set_vm(self)
 	game_size = Vector2()
-	game_size.x = ProjectSettings.get_setting("display/game_width")
-	game_size.y = ProjectSettings.get_setting("display/game_height")
+	game_size.x = ProjectSettings.get_setting("escoria/display/game_width")
+	game_size.y = ProjectSettings.get_setting("escoria/display/game_height")
 
 	scenes_cache_list.push_back(ProjectSettings.get_setting("platform/telon"))
 	scenes_cache_list.push_back(get_hud_scene())
