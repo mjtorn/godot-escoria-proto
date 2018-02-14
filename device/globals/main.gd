@@ -128,7 +128,7 @@ func _input(event):
 			current.get_node("game").scene_input(event)
 
 func load_telon():
-	var tpath = ProjectSettings.get_setting("platform/telon")
+	var tpath = ProjectSettings.get_setting("escoria/platform/telon")
 	var tres = vm.res_cache.get_resource(tpath)
 
 	get_node("layers/telon/telon").replace_by_instance(tres)

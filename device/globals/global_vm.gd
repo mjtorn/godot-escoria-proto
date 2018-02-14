@@ -100,7 +100,7 @@ func update_window_fullscreen(p_force = false):
 		OS.set_window_fullscreen(settings.fullscreen)
 		pass
 	else:
-		var title = ProjectSettings.get_setting("platform/window_title_height")
+		var title = ProjectSettings.get_setting("escoria/platform/window_title_height")
 		var sc = OS.get_current_screen()
 		var ratio = 1080 / 1920.0
 		var size = OS.get_screen_size(sc)
@@ -115,7 +115,7 @@ func update_window_fullscreen(p_force = false):
 		OS.set_window_fullscreen(settings.fullscreen)
 		OS.set_window_size(size)
 		#OS.set_window_position(Vector2(0, 0))
-		OS.set_window_resizable(ProjectSettings.get_setting("platform/screen_resizable"))
+		OS.set_window_resizable(ProjectSettings.get_setting("escoria/platform/screen_resizable"))
 
 func music_volume_changed():
 	emit_signal("music_volume_changed")
@@ -184,7 +184,7 @@ func update_camera(time):
 			camera.set_position(cpos + dif.normalized() * dist)
 			pos = cpos + dif.normalized() * dist
 
-	if ProjectSettings.get_setting("platform/use_custom_camera"):
+	if ProjectSettings.get_setting("escoria/platform/use_custom_camera"):
 		var half = game_size / 2
 		pos = _adjust_camera(pos)
 		var t = Transform2D()
@@ -625,7 +625,7 @@ func save():
 
 func set_camera(p_cam):
 	camera = p_cam
-	if ProjectSettings.get_setting("platform/use_custom_camera"):
+	if ProjectSettings.get_setting("escoria/platform/use_custom_camera"):
 		camera.clear_current()
 
 func clear():
@@ -732,7 +732,7 @@ func _ready():
 	game_size.x = ProjectSettings.get_setting("escoria/display/game_width")
 	game_size.y = ProjectSettings.get_setting("escoria/display/game_height")
 
-	scenes_cache_list.push_back(ProjectSettings.get_setting("platform/telon"))
+	scenes_cache_list.push_back(ProjectSettings.get_setting("escoria/platform/telon"))
 	scenes_cache_list.push_back(get_hud_scene())
 
 	if !ProjectSettings.has_method("debug/skip_cache") || !ProjectSettings.get_setting("debug/skip_cache"):

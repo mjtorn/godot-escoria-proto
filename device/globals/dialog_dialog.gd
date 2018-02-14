@@ -65,7 +65,7 @@ func start(params, p_context):
 		but.connect("mouse_entered",self,"_on_mouse_enter",[but])
 		but.connect("mouse_exited",self,"_on_mouse_exit",[but])
 
-		var height_ratio = ProjectSettings.get_setting("platform/dialog_option_height")
+		var height_ratio = ProjectSettings.get_setting("escoria/platform/dialog_option_height")
 		var size = it.get_custom_minimum_size()
 		size.y = size.y * height_ratio
 		it.set_custom_minimum_size(size)

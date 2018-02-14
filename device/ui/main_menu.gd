@@ -114,7 +114,7 @@ func _ready():
 
 	call_deferred("set_continue_button")
 
-	if !ProjectSettings.get_setting("platform/exit_button"):
+	if !ProjectSettings.get_setting("escoria/platform/exit_button"):
 		get_node("exit").hide()
 
 
