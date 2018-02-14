@@ -19,11 +19,10 @@ main="*res://globals/main.tscn"
 vm="*res://globals/global_vm.tscn"
 
 [escoria]
-; application
-max_voice_volume=2
-save_data="res://globals/save_data.gd"
-speech_suffix=".spx"
-tooltip_lang_default="en"
+application/max_voice_volume=2
+application/save_data="res://globals/save_data.gd"
+application/speech_suffix=".spx"
+application/tooltip_lang_default="en"
 
 ; debug
 print_clicked_control=true

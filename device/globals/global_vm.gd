@@ -709,7 +709,7 @@ func get_hud_scene():
 
 func _ready():
 
-	save_data = load(ProjectSettings.get_setting("application/save_data")).new()
+	save_data = load(ProjectSettings.get_setting("escoria/application/save_data")).new()
 	save_data.start()
 
 	get_tree().set_auto_accept_quit(false)
