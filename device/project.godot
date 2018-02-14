@@ -40,15 +40,6 @@ platform/telon="res://globals/telon.tscn"
 platform/use_custom_camera=false
 platform/window_title_height=32
 
-platform/dialog_instance_scale=1
-platform/disable_screen_shaders=false
-platform/file_cases="res://game/ui/file_cases/file_cases.tscn"
-platform/gamecenter=false
-platform/ghost_remap=""
-platform/hud_mobile=false
-platform/logos="res://game/logos.ogm"
-platform/windowed_available=true
-
 ; ui
 credits=""
 in_game_menu=""
