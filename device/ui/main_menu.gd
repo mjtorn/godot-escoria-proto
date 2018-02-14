@@ -36,15 +36,15 @@ func continue_pressed():
 
 func save_pressed():
 	button_clicked()
-	main.load_menu(ProjectSettings.get_setting("ui/savegames"))
+	main.load_menu(ProjectSettings.get_setting("escoria/ui/savegames"))
 
 func settings_pressed():
 	button_clicked()
-	main.load_menu(ProjectSettings.get_setting("ui/settings"))
+	main.load_menu(ProjectSettings.get_setting("escoria/ui/settings"))
 
 func credits_pressed():
 	button_clicked()
-	main.load_menu(ProjectSettings.get_setting("ui/credits"))
+	main.load_menu(ProjectSettings.get_setting("escoria/ui/credits"))
 
 func close():
 	main.menu_close(self)

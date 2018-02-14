@@ -40,11 +40,10 @@ platform/telon="res://globals/telon.tscn"
 platform/use_custom_camera=false
 platform/window_title_height=32
 
-; ui
-credits=""
-in_game_menu=""
-main_menu="res://ui/main_menu.tscn"
-savegames=""
+ui/credits=""
+ui/in_game_menu=""
+ui/main_menu="res://ui/main_menu.tscn"
+ui/savegames=""
 
 [display]
 
