@@ -24,8 +24,7 @@ application/save_data="res://globals/save_data.gd"
 application/speech_suffix=".spx"
 application/tooltip_lang_default="en"
 
-; debug
-screen_size_override=false
+debug/screen_size_override=false
 
 ; display
 game_height=1080

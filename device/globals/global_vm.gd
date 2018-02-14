@@ -91,7 +91,7 @@ func settings_loaded(p_settings):
 	get_tree().call_group_flags(SceneTree.GROUP_CALL_DEFAULT, "ui", "language_changed")
 
 func update_window_fullscreen(p_force = false):
-	if ProjectSettings.get_setting("debug/screen_size_override"):
+	if ProjectSettings.get_setting("escoria/debug/screen_size_override"):
 		return
 	if !p_force && (settings.fullscreen == OS.is_window_fullscreen()):
 		return
