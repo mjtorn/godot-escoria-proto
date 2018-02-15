@@ -18,6 +18,13 @@ run/main_scene="res://scenes/rooms/001.office/main.tscn"
 main="*res://globals/main.tscn"
 vm="*res://globals/global_vm.tscn"
 
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/test_width=1920
+window/size/test_height=1080
+
 [escoria]
 
 application/max_voice_volume=2
@@ -38,13 +45,6 @@ ui/credits=""
 ui/in_game_menu=""
 ui/main_menu="res://ui/main_menu.tscn"
 ui/savegames=""
-
-[display]
-
-window/size/width=1920
-window/size/height=1080
-window/size/test_height=1620
-window/size/test_width=2880
 
 [gdnative]
 
