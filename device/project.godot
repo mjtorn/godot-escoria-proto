@@ -35,6 +35,7 @@ platform/action_menu_scale=2
 platform/credits="res://game/ui/credits/credits.txt"
 platform/dialog_option_height=1
 platform/dialog_type_suffix=""
+platform/force_text_ids=false
 platform/exit_button=true
 platform/screen_resizable=true
 platform/show_ingame_buttons=false
