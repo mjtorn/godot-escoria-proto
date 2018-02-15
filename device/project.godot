@@ -19,16 +19,11 @@ main="*res://globals/main.tscn"
 vm="*res://globals/global_vm.tscn"
 
 [escoria]
+
 application/max_voice_volume=2
 application/save_data="res://globals/save_data.gd"
 application/speech_suffix=".spx"
 application/tooltip_lang_default="en"
-
-debug/screen_size_override=false
-
-display/game_height=1080
-display/game_width=1920
-
 platform/action_menu_scale=2
 platform/credits="res://game/ui/credits/credits.txt"
 platform/dialog_option_height=1
@@ -39,7 +34,6 @@ platform/show_ingame_buttons=false
 platform/telon="res://globals/telon.tscn"
 platform/use_custom_camera=false
 platform/window_title_height=32
-
 ui/credits=""
 ui/in_game_menu=""
 ui/main_menu="res://ui/main_menu.tscn"
@@ -49,10 +43,8 @@ ui/savegames=""
 
 window/size/width=1920
 window/size/height=1080
-window/height=1080
-window/test_height=1080
-window/test_width=1920
-window/width=1920
+window/size/test_height=1620
+window/size/test_width=2880
 
 [gdnative]
 
@@ -87,4 +79,3 @@ use=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_na
 [locale]
 
 translations=PoolStringArray( "res://translations/general.en.translation", "res://translations/general.es.translation", "res://translations/general.fr.translation" )
-
