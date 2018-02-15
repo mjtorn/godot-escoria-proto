@@ -78,7 +78,7 @@ func clicked(obj, pos):
 		player = self
 	if mode == "default":
 		var action = obj.get_action()
-		#action_menu.stop()
+		action_menu.stop()
 		if action == "walk":
 
 			#click.set_position(pos)
@@ -237,7 +237,6 @@ func _process(time):
 					mouse_enter(mobj)
 					last_obj = mobj
 			else:
-				#action_menu.stop()
 				mouse_exit(mobj)
 				last_obj = null
 
