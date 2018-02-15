@@ -7,10 +7,10 @@
 [ext_resource path="res://scenes/rooms/001.office/02-objects.png" type="Texture" id=5]
 [ext_resource path="res://globals/terrain.gd" type="Script" id=6]
 [ext_resource path="res://scenes/actors/player-char/player.tscn" type="PackedScene" id=7]
-[ext_resource path="res://ui/action_menu.tscn" type="PackedScene" id=8]
-[ext_resource path="res://globals/item.gd" type="Script" id=9]
-[ext_resource path="res://scenes/rooms/001.office/03-desk.crop.png" type="Texture" id=10]
-[ext_resource path="res://globals/game.tscn" type="PackedScene" id=11]
+[ext_resource path="res://globals/item.gd" type="Script" id=8]
+[ext_resource path="res://scenes/rooms/001.office/03-desk.crop.png" type="Texture" id=9]
+[ext_resource path="res://globals/game.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ui/action_menu.tscn" type="PackedScene" id=11]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -18,7 +18,7 @@ vertices = PoolVector2Array( 1122.3, 623.08, 2039, 700, -0.241604, 706.083, 608.
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 1, 0, 6 ), PoolIntArray( 7, 4, 6, 8 ), PoolIntArray( 3, 2, 7, 8 ) ]
 outlines = [ PoolVector2Array( 1327, 506, 1954, 508, 2039, 700, -0.241604, 706.083, 55.5653, 497.711 ), PoolVector2Array( 608.146, 618.757, 1122.3, 623.08, 1120.47, 529.702, 609.976, 533.16 ) ]
 
-[node name="scene" type="Node2D"]
+[node name="scene" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -100,11 +100,9 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 position = Vector2( 2013.37, 895.834 )
 z_index = 895
 
-[node name="action_menu" parent="." index="3" instance=ExtResource( 8 )]
+[node name="desk" type="Node2D" parent="." index="3"]
 
-[node name="desk" type="Node2D" parent="." index="4"]
-
-script = ExtResource( 9 )
+script = ExtResource( 8 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 animations = null
 speed = 300
@@ -112,7 +110,7 @@ scale_on_map = false
 light_on_map = false
 tooltip = ""
 action = ""
-events_path = ""
+events_path = "res://scenes/rooms/001.office/desk.esc"
 global_id = ""
 use_combine = false
 inventory = false
@@ -140,7 +138,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 stretch_mode = 0
 
 [node name="animation" type="AnimationPlayer" parent="desk" index="1"]
@@ -154,6 +152,8 @@ blend_times = [  ]
 
 [node name="interact_pos" type="Position2D" parent="desk" index="2"]
 
-[node name="game" parent="." index="5" instance=ExtResource( 11 )]
+[node name="game" parent="." index="4" instance=ExtResource( 10 )]
+
+[node name="action_menu" parent="game" index="4" instance=ExtResource( 11 )]
 
 
