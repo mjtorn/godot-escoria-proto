@@ -42,7 +42,7 @@ platform/show_ingame_buttons=false
 platform/telon="res://globals/telon.tscn"
 platform/window_title_height=32
 ui/credits=""
-ui/in_game_menu=""
+ui/in_game_menu="res://ui/in_game_menu.tscn"
 ui/main_menu="res://ui/main_menu.tscn"
 ui/savegames=""
 
