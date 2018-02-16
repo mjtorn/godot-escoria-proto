@@ -2,8 +2,9 @@
 
 [ext_resource path="res://globals/action_menu.gd" type="Script" id=1]
 
-[node name="action_menu" type="Node2D" index="0"]
+[node name="action_menu" type="Node2D"]
 
+visible = false
 z_index = 4096
 script = ExtResource( 1 )
 
@@ -32,6 +33,7 @@ group = null
 text = "look"
 flat = false
 align = 1
+_sections_unfolded = [ "Mouse" ]
 
 [node name="use" type="Button" parent="actions" index="1"]
 
