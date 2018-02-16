@@ -21,6 +21,7 @@ outlines = [ PoolVector2Array( 1327, 506, 1954, 508, 2039, 700, -0.241604, 706.0
 [node name="scene" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
 events_path = "res://scenes/rooms/001.office/main.esc"
 
 [node name="background" type="TextureRect" parent="." index="0"]
@@ -109,7 +110,7 @@ animations = null
 speed = 300
 scale_on_map = false
 light_on_map = false
-tooltip = ""
+tooltip = "Desk"
 action = ""
 events_path = "res://scenes/rooms/001.office/desk.esc"
 global_id = ""
@@ -155,7 +156,188 @@ blend_times = [  ]
 
 position = Vector2( 1346.17, 972.049 )
 
-[node name="game" parent="." index="4" instance=ExtResource( 10 )]
+[node name="books" type="TextureButton" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2379.0
+margin_top = 325.0
+margin_right = 2620.0
+margin_bottom = 404.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+script = ExtResource( 8 )
+animations = null
+speed = 300
+scale_on_map = false
+light_on_map = false
+tooltip = "Books"
+action = ""
+events_path = "res://scenes/rooms/001.office/books.esc"
+global_id = ""
+use_combine = false
+inventory = false
+use_action_menu = true
+interact_angle = -1
+talk_animation = "talk"
+active = true
+placeholders = {
+
+}
+use_custom_z = false
+
+[node name="interact_pos" type="Position2D" parent="books" index="0"]
+
+position = Vector2( -35, 445.405 )
+
+[node name="bhbook" type="Node2D" parent="." index="5"]
+
+script = ExtResource( 8 )
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
+animations = null
+speed = 300
+scale_on_map = false
+light_on_map = false
+tooltip = "Book on black holes"
+action = ""
+events_path = "res://scenes/rooms/001.office/bhbook.esc"
+global_id = "bhbook"
+use_combine = false
+inventory = false
+use_action_menu = true
+interact_angle = -1
+talk_animation = "talk"
+active = false
+placeholders = {
+
+}
+use_custom_z = false
+
+[node name="area" type="TextureButton" parent="bhbook" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2523.0
+margin_top = 353.0
+margin_right = 2563.0
+margin_bottom = 393.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+
+[node name="interact_pos" type="Position2D" parent="bhbook" index="1"]
+
+visible = false
+position = Vector2( -176, 446 )
+
+[node name="grail" type="TextureButton" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2436.0
+margin_top = 457.0
+margin_right = 2512.0
+margin_bottom = 525.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+script = ExtResource( 8 )
+animations = null
+speed = 300
+scale_on_map = false
+light_on_map = false
+tooltip = "The Holy Grail"
+action = ""
+events_path = "res://scenes/rooms/001.office/holygrail.esc"
+global_id = ""
+use_combine = false
+inventory = false
+use_action_menu = true
+interact_angle = -1
+talk_animation = "talk"
+active = true
+placeholders = {
+
+}
+use_custom_z = false
+
+[node name="interact_pos" type="Position2D" parent="grail" index="0"]
+
+position = Vector2( -114.61, 308.883 )
+
+[node name="radio" type="TextureButton" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2407.0
+margin_top = 540.0
+margin_right = 2612.0
+margin_bottom = 629.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+script = ExtResource( 8 )
+animations = null
+speed = 300
+scale_on_map = false
+light_on_map = false
+tooltip = "Radio"
+action = ""
+events_path = "res://scenes/rooms/001.office/radio.esc"
+global_id = ""
+use_combine = false
+inventory = false
+use_action_menu = true
+interact_angle = -1
+talk_animation = "talk"
+active = true
+placeholders = {
+
+}
+use_custom_z = false
+
+[node name="interact_pos" type="Position2D" parent="radio" index="0"]
+
+position = Vector2( -63, 250 )
+
+[node name="game" parent="." index="8" instance=ExtResource( 10 )]
 
 [node name="action_menu" parent="game" index="4" instance=ExtResource( 11 )]
 
