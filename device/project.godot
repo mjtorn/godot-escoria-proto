@@ -44,6 +44,7 @@ platform/window_title_height=32
 ui/credits=""
 ui/in_game_menu="res://ui/in_game_menu.tscn"
 ui/main_menu="res://ui/main_menu.tscn"
+ui/confirm_popup="res://ui/confirm_popup.tscn"
 ui/savegames=""
 
 [gdnative]
