@@ -1,0 +1,4 @@
+:look
+say player player_look_holygrail_1:"It's the Holy Grail!"
+say player player_look_holygrail_2:"I don't think it works as advertised, though."
+

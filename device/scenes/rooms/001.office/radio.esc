@@ -1,0 +1,3 @@
+:look
+say player player_look_radio_1:"It's my radio."
+say player player_look_radio_2:"Looks like a five-year-old drew it."

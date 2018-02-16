@@ -1,0 +1,9 @@
+:pick_up
+say player player_pickup_books:"I don't want to carry books."
+
+:look
+say player player_look_books:"Books."
+say player player_seen_bh:"One of them is on black holes." [!seen_bh]
+set_global seen_bh true
+set_active bhbook true
+
