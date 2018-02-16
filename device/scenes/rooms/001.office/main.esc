@@ -1,0 +1,5 @@
+:ready
+> [!said_deliver_speech]
+	say player deliver_speech:"I better go deliver my speech"
+	set_global said_deliver_speech true
+

@@ -21,6 +21,7 @@ outlines = [ PoolVector2Array( 1327, 506, 1954, 508, 2039, 700, -0.241604, 706.0
 [node name="scene" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
+events_path = "res://scenes/rooms/001.office/main.esc"
 
 [node name="background" type="TextureRect" parent="." index="0"]
 
@@ -151,6 +152,8 @@ playback_speed = 1.0
 blend_times = [  ]
 
 [node name="interact_pos" type="Position2D" parent="desk" index="2"]
+
+position = Vector2( 1346.17, 972.049 )
 
 [node name="game" parent="." index="4" instance=ExtResource( 10 )]
 
