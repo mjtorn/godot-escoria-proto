@@ -1,3 +1,9 @@
 :look
 debug "My desk"
-say player "My desk"
+say player player_look_desk:"My desk"
+
+:pick_up
+> [!i/office_key]
+	say player player_find_key:"The key to my office"
+	set_global i/office_key true
+
