@@ -2,7 +2,7 @@
 
 [ext_resource path="res://globals/action_menu.gd" type="Script" id=1]
 
-[node name="action_menu" type="Node2D"]
+[node name="action_menu" type="Node2D" index="0"]
 
 visible = false
 z_index = 4096
@@ -35,7 +35,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Mouse" ]
 
-[node name="use" type="Button" parent="actions" index="1"]
+[node name="pick_up" type="Button" parent="actions" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -55,7 +55,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "use"
+text = "pick up"
 flat = false
 align = 1
 
