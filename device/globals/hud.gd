@@ -1,6 +1,7 @@
 extends Control
 
 var background = null
+export var expected_ingame_buttons = ["inv_toggle", "buttons", "buttons/hints", "buttons/menu"]
 
 func set_tooltip(text):
 	printt("hud got tooltip text ", text)
@@ -43,13 +44,25 @@ func menu_closed():
 func _ready():
 	add_to_group("hud")
 	add_to_group("game")
-	#get_node("inv_toggle").connect("pressed", self, "inv_toggle")
-	#get_node("inv_toggle").set_focus_mode(Control.FOCUS_NONE)
 
-	#get_node("buttons").hide()
 	if ProjectSettings.get_setting("escoria/platform/show_ingame_buttons"):
-		if (not get_node("inv_toggle").is_hidden()):
-			get_node("buttons").show()
+		var good_ingame_buttons = true
+		for expected_ingame_button in expected_ingame_buttons:
+			if !get_node(expected_ingame_button):
+				vm.report_errors("hud.gd", ["show_ingame_buttons with no " + expected_ingame_button])
+				good_ingame_buttons = false
+
+		if good_ingame_buttons:
+			get_node("buttons").hide()
+
+			if (not get_node("inv_toggle").is_hidden()):
+					get_node("buttons").show()
+
+			get_node("inv_toggle").connect("visibility_changed",self,"_on_inv_toggle_vis_chaged")
+			get_node("inv_toggle").connect("pressed", self, "inv_toggle")
+			get_node("inv_toggle").set_focus_mode(Control.FOCUS_NONE)
+			get_node("buttons/hints").connect("pressed",self,"_on_hint_pressed")
+			get_node("buttons/menu").connect("pressed",self,"_on_menu_pressed")
 
 		var p = get_parent().get_parent().get_parent()
 		for i in range(0, p.get_child_count()):
@@ -57,11 +70,6 @@ func _ready():
 			if (c is preload("res://globals/background.gd")):
 				background = c
 				break
-
-		get_node("inv_toggle").connect("visibility_changed",self,"_on_inv_toggle_vis_chaged")
-		get_node("buttons/hints").connect("pressed",self,"_on_hint_pressed")
-		get_node("buttons/menu").connect("pressed",self,"_on_menu_pressed")
-
 
 	set_tooltip("")
 
