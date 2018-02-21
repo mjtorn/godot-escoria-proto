@@ -337,7 +337,51 @@ use_custom_z = false
 
 position = Vector2( -63, 250 )
 
-[node name="game" parent="." index="8" instance=ExtResource( 10 )]
+[node name="door" type="TextureButton" parent="." index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 173.0
+margin_top = 237.0
+margin_right = 455.0
+margin_bottom = 727.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+script = ExtResource( 8 )
+animations = null
+speed = 300
+scale_on_map = false
+light_on_map = false
+tooltip = "Door"
+action = ""
+events_path = "res://scenes/rooms/001.office/door.esc"
+global_id = ""
+use_combine = false
+inventory = false
+use_action_menu = true
+interact_angle = -1
+talk_animation = "talk"
+active = true
+placeholders = {
+
+}
+use_custom_z = false
+
+[node name="interact_pos" type="Position2D" parent="door" index="0"]
+
+position = Vector2( 131.139, 527.571 )
+
+[node name="game" parent="." index="9" instance=ExtResource( 10 )]
 
 [node name="action_menu" parent="game" index="4" instance=ExtResource( 11 )]
 

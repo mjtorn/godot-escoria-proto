@@ -1,0 +1,6 @@
+:pick_up
+say player player_pickup_door:"It's locked." [!i/office_key]
+> [i/office_key]
+	say player player_pickup_door:"Here goes." [!exited_office]
+	set_global exited_office true
+
