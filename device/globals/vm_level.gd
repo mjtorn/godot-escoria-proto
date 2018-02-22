@@ -100,7 +100,7 @@ func inventory_add(params):
 func inventory_remove(params):
 	vm.inventory_set(params[0], false)
 	return vm.state_return
-	
+
 func inventory_open(params):
 	vm.emit_signal("open_inventory", params[0])
 

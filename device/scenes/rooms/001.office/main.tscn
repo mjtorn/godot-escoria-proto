@@ -18,7 +18,7 @@ vertices = PoolVector2Array( 1122.3, 623.08, 2039, 700, -0.241604, 706.083, 608.
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 1, 0, 6 ), PoolIntArray( 7, 4, 6, 8 ), PoolIntArray( 3, 2, 7, 8 ) ]
 outlines = [ PoolVector2Array( 1327, 506, 1954, 508, 2039, 700, -0.241604, 706.083, 55.5653, 497.711 ), PoolVector2Array( 608.146, 618.757, 1122.3, 623.08, 1120.47, 529.702, 609.976, 533.16 ) ]
 
-[node name="scene" type="Node2D" index="0"]
+[node name="scene" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Z Index" ]
