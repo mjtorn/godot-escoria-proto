@@ -2,10 +2,10 @@
 
 [ext_resource path="res://globals/inventory.gd" type="Script" id=1]
 [ext_resource path="res://game/inventory_items.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/items/office_key/OfficeKey.png" type="Texture" id=3]
-[ext_resource path="res://globals/item.gd" type="Script" id=4]
+[ext_resource path="res://globals/item.gd" type="Script" id=3]
+[ext_resource path="res://scenes/items/office_key/OfficeKey.png" type="Texture" id=4]
 
-[node name="inventory" type="Control" index="0"]
+[node name="inventory" type="Control"]
 
 visible = false
 anchor_left = 0.0
@@ -105,36 +105,17 @@ group = null
 
 [node name="items" parent="." index="3" instance=ExtResource( 2 )]
 
-visible = false
+[node name="office_key" type="Node2D" parent="items" index="0"]
 
-[node name="office_key" type="TextureButton" parent="items" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 3 )
-script = ExtResource( 4 )
-_sections_unfolded = [ "Textures" ]
+script = ExtResource( 3 )
+_sections_unfolded = [ "Mouse", "Textures" ]
 animations = null
 speed = 300
 scale_on_map = false
 light_on_map = false
 tooltip = "Office key"
 action = ""
-events_path = ""
+events_path = "res://scenes/items/office_key/OfficeKey.esc"
 global_id = "office_key"
 use_combine = true
 inventory = false
@@ -147,18 +128,18 @@ placeholders = {
 }
 use_custom_z = false
 
-[node name="actions" type="Control" parent="." index="4"]
+[node name="area" type="TextureRect" parent="items/office_key" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
 rect_pivot_offset = Vector2( 0, 0 )
-mouse_filter = 0
+mouse_filter = 1
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 2
-size_flags_vertical = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+stretch_mode = 0
 
 

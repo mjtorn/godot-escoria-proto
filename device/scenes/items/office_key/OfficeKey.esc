@@ -1,0 +1,3 @@
+:look
+say player player_look_officekey:"The key to my office."
+
