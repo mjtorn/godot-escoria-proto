@@ -21,6 +21,8 @@ var click_anim
 var camera
 export var camera_limits = Rect2()
 
+var tooltip
+
 func set_mode(p_mode):
 	mode = p_mode
 
@@ -268,7 +270,6 @@ func _input(ev):
 	if ProjectSettings.get_setting("escoria/ui/tooltip_follows_mouse"):
 		# Must verify `position` is there, key inputs do not have it
 		if vm.hover_object and "position" in ev:
-			var tooltip = get_node("hud_layer/hud/tooltip")
 			var pos = ev.position - tooltip.get_size() / Vector2(2, 1)
 			tooltip.set_position(pos)
 
@@ -329,6 +330,7 @@ func load_hud():
 	#else:
 	#	get_node("hud_layer/hud/inv_toggle").hide()
 
+	tooltip = get_node("hud_layer/hud/tooltip")
 
 func _ready():
 	add_to_group("game")
