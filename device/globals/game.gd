@@ -34,11 +34,14 @@ func mouse_enter(obj):
 		text = text.replace("%2", tr(tt))
 		text = text.replace("%1", tr(current_tool.get_tooltip()))
 	elif obj.inventory:
-		var action = inventory.get_action()
-		if action == "":
-			action = current_action
-		text = tr(action + ".id")
-		text = text.replace("%1", tr(tt))
+		if !current_action:
+			text = tr(tt)
+		else:
+			var action = inventory.get_action()
+			if action == "":
+				action = current_action
+			text = tr(action + ".id")
+			text = text.replace("%1", tr(tt))
 	else:
 		text = tt
 	get_tree().call_group_flags(SceneTree.GROUP_CALL_DEFAULT, "hud", "set_tooltip", text)
@@ -57,6 +60,9 @@ func mouse_exit(obj):
 
 func clear_action():
 	current_tool = null
+	# XXX: Should current_action be cleared also for verb menus? Until now it has not been.
+	if action_menu:
+		current_action = ""
 
 func set_current_action(p_act):
 	if p_act != current_action:
@@ -93,6 +99,21 @@ func clicked(obj, pos, input_event = null):
 			get_tree().call_group_flags(SceneTree.GROUP_CALL_DEFAULT, "hud", "set_tooltip", "")
 
 		elif obj.inventory:
+			# Use and look are the only valid choices with an action menu
+			if action_menu:
+				# Do not set `look` as permanent action
+				if input_event.button_index == BUTTON_RIGHT:
+					interact([obj, "look"])
+					# XXX: Moving the mouse during `:look` will cause the tooltip to disappear
+					# so the following is a good-enough-for-now fix for it
+					get_tree().call_group_flags(SceneTree.GROUP_CALL_DEFAULT, "hud", "set_tooltip", obj.get_tooltip())
+					vm.hover_begin(obj)
+				else:
+					current_action = "use"
+					# XXX: Setting an action here does not update the tooltip like `mouse_enter` does. Compensate.
+					var text = tr("use.id")
+					text = text.replace("%1", tr(obj.get_tooltip()))
+					get_tree().call_group_flags(SceneTree.GROUP_CALL_DEFAULT, "hud", "set_tooltip", text)
 
 			if current_action == "use" && obj.use_combine && current_tool == null:
 				set_current_tool(obj)
